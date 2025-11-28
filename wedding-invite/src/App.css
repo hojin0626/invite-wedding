@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #fffaf5;
+  --text: #333;
+  --accent: #b48a78;
+  --card: #ffffff;
+  --muted: #666;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;   /* 수평 가운데 */
+  align-items: center;       /* 수직 가운데 */
+  min-height: 100vh;         /* 화면 전체 높이 */
+}
+main {
+  max-width: 600px;
+  padding: 0 18px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cover {
+  height: 340px;
+  background: #ddd center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.cover-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.names {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.section {
+  padding: 22px 18px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section-title {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+}
+.message {
+  white-space: pre-line;
+  margin: 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.date { font-size: 16px; font-weight: 600; }
+
+.venue-name { font-weight: 600; }
+.venue-address { color: var(--muted); margin-top: 4px; }
+
+.grid.two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 600px) {
+  .grid.two { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  margin: 0 auto;
+}
+.label { font-size: 13px; color: var(--accent); font-weight: 700; }
+.value { margin-top: 6px; font-size: 15px; }
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: 0; border-radius: 8px;
+  font-weight: 600; text-decoration: none;
+  margin: 10px auto;
+}
+.btn:hover { opacity: 0.95; }
+
+.qr {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: zoom-in;
+  margin: 10px auto;
+}
+
+.tip {
+  margin-top: 8px; font-size: 13px; color: var(--muted);
+  text-align: center;
+}
+
+.footer {
+  padding: 22px 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
