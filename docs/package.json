@@ -1,5 +1,6 @@
 {
-  "name": "wedding-invite",
+  "name": "wedding-card",
+  "homepage": "https://hojin0626.github.io/invite-wedding/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

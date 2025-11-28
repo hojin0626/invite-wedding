@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&family=Gowun+Batang&family=Jua&family=Nanum+Brush+Script&display=swap');
 
 :root {
   --bg: #fffaf5;
-  --text: #333;
+  --text: #6b3816;
   --accent: #b48a78;
   --card: #ffffff;
   --muted: #666;
+  white-space: pre-line;
 }
 
 * { box-sizing: border-box; }
-html, body, #root { height: 100%; }
+html, body, #root { height: 98%; }
 body {
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Gowun Batang', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
   background: var(--bg);
   color: var(--text);
   display: flex;
@@ -34,7 +38,7 @@ main {
 }
 
 .cover {
-  height: 340px;
+  height: 200px;
   background: #ddd center/cover no-repeat;
   position: relative;
   display: flex;
@@ -53,9 +57,16 @@ main {
   color: #fff;
 }
 .title {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  font-family: 'Playwrite US Trad Guides', cursive;
+}
+.title.sub{
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Nanum Brush Script', cursive;
 }
 .names {
   margin-top: 8px;
@@ -67,8 +78,8 @@ main {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  /* border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); */
 }
 .section-title {
   margin: 0 0 10px;
@@ -77,10 +88,11 @@ main {
   font-weight: 700;
 }
 .message {
-  white-space: pre-line;
   margin: 0;
   line-height: 1.6;
   color: var(--muted);
+  font-size: 18px;
+  font-family: "Gowun Batang";
 }
 .date { font-size: 16px; font-weight: 600; }
 
@@ -92,8 +104,29 @@ main {
   grid-template-columns: 1fr;
   gap: 12px;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .grid.two { grid-template-columns: 1fr 1fr; }
+}
+
+.grid.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid.three .btn {
+  display: flex;              /* 내부 정렬 */
+  flex-direction: column;     /* 이미지 위, 텍스트 아래 */
+  align-items: center;        /* 가운데 정렬 */
+  justify-content: center;
+  padding: auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.grid.three .map-label {
+  width: 35px;   /* 아이콘 크기 고정 */
+  height: auto;
 }
 
 .card {
@@ -103,7 +136,7 @@ main {
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
   margin: 0 auto;
 }
-.label { font-size: 13px; color: var(--accent); font-weight: 700; }
+.label { font-size: 15px; color: var(--accent); font-weight: 700; }
 .value { margin-top: 6px; font-size: 15px; }
 
 .btn {
@@ -127,6 +160,14 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   cursor: zoom-in;
   margin: 10px auto;
+}
+.toggle-btn {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .tip {
